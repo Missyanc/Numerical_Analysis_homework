@@ -15,7 +15,6 @@ def hilbert(n):
     for i in range(1,n+1,1):
         for j in range(1,n+1,1):
             hilbert[i - 1][j - 1] = float(1 / (i + j - 1))
-
     return hilbert
 
 if __name__ == '__main__':
@@ -31,7 +30,6 @@ if __name__ == '__main__':
     # 给定解 [1,1,1,1,1,1] 求其b
     b1 = np.zeros(6)
     for i in range(6):
-
         b1[i] = np.dot((hilbert_6[i,:]),b.T)
 
     print(b1)
